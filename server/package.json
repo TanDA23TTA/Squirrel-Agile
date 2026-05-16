@@ -1,0 +1,28 @@
+{
+  "name": "squirrel-agile-server",
+  "version": "1.0.0",
+  "description": "Backend server for login, registration, account info, and transaction management",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.10.0",
+    "express-validator": "^7.0.1",
+    "helmet": "^7.0.0",
+    "jsonwebtoken": "^9.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.4.2",
+    "nodemon": "^3.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

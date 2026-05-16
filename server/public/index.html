@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Squirrel Agile - Quản lý tài khoản</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Squirrel Agile</h1>
+    <section class="form-panel">
+      <div>
+        <h2>Đăng ký</h2>
+        <input id="registerName" placeholder="Tên" />
+        <input id="registerEmail" placeholder="Email" type="email" />
+        <input id="registerPassword" placeholder="Mật khẩu" type="password" />
+        <button id="registerBtn">Đăng ký</button>
+      </div>
+      <div>
+        <h2>Đăng nhập</h2>
+        <input id="loginEmail" placeholder="Email" type="email" />
+        <input id="loginPassword" placeholder="Mật khẩu" type="password" />
+        <button id="loginBtn">Đăng nhập</button>
+      </div>
+    </section>
+
+    <section id="accountSection" class="account-panel hidden">
+      <h2>Thông tin tài khoản</h2>
+      <p id="accountInfo"></p>
+      <p id="balanceInfo"></p>
+      <div class="transaction-form">
+        <h3>Thêm giao dịch</h3>
+        <select id="transactionType">
+          <option value="deposit">Nạp tiền</option>
+          <option value="withdraw">Rút tiền</option>
+        </select>
+        <input id="transactionAmount" placeholder="Số tiền" type="number" min="0.01" step="0.01" />
+        <input id="transactionDescription" placeholder="Mô tả" />
+        <button id="transactionBtn">Thực hiện</button>
+      </div>
+      <div>
+        <h3>Giao dịch gần nhất</h3>
+        <ul id="transactionsList"></ul>
+      </div>
+    </section>
+
+    <div id="message" class="message"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
